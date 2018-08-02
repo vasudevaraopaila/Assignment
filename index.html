@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html ng-app="helloworldApp">
+<head>
+  <title>Hello Angular.JS</title>
+  <link href="style.css" rel="stylesheet" />
+  <script src="angular.js"></script>
+  <script src="app.js"></script>
+  <script src="controller.js"></script>
+  <script src="canvasjs.min.js"></script>
+</head>
+<body>
+  <div ng-controller="HelloworldCtrl">
+    <h2>File Upload</h2>
+		   
+		    <input type="file" id="fileinput" accept=".csv" ng-file-model="files" multiple />
+		    <button type="button" ng-click="upload()">Upload</button>
+		    
+		    <p ng-repeat="file in files">
+		      {{file.name}}
+		    </p>
+		    <div id="editor">
+		    	<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+		    </div>
+  </div>
+</body>
+</html>
